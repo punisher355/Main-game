@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Komiku_-_04_-_Shopping_List.mp3-6702ed93f3f3e9f632d33e6ad89c0e15.mp3str"
+
+[deps]
+
+source_file="res://Music/Komiku_-_04_-_Shopping_List.mp3"
+dest_files=[ "res://.import/Komiku_-_04_-_Shopping_List.mp3-6702ed93f3f3e9f632d33e6ad89c0e15.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

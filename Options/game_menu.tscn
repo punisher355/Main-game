@@ -1,0 +1,211 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Options/Quit.gd" type="Script" id=1]
+[ext_resource path="res://Options/Options.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player/Gear/Primary_Slider.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Options/Game_map.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Options/game_menu.gd" type="Script" id=5]
+
+[node name="game_menu" type="CanvasLayer"]
+pause_mode = 2
+layer = 2
+script = ExtResource( 5 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Top border " type="Label" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 65.0
+text = "
+
+
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 69.0
+margin_right = 1024.0
+margin_bottom = 89.0
+size_flags_horizontal = 3
+size_flags_vertical = 9
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_right = 142.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="equipment" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 146.0
+margin_right = 289.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "EQUIPMENT"
+
+[node name="items" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 293.0
+margin_right = 436.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( -519.795, 90.4302 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "ITEMS"
+
+[node name="map" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 440.0
+margin_right = 583.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "MAP"
+
+[node name="options" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 587.0
+margin_right = 730.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "OPTIONS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit_Load" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 734.0
+margin_right = 877.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "QUIT/LOAD"
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 881.0
+margin_right = 1024.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="mid border" type="Label" parent="VBoxContainer"]
+margin_top = 93.0
+margin_right = 1024.0
+margin_bottom = 124.0
+text = "
+"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 128.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Priamry_Slider" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 3 )]
+visible = false
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 510.0
+margin_bottom = 472.0
+
+[node name="Game_map" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 4 )]
+visible = false
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 472.0
+
+[node name="Options" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
+pause_mode = 2
+visible = false
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 4.0
+margin_right = 512.0
+margin_bottom = 472.0
+
+[node name="Quit_Load" type="Control" parent="VBoxContainer/HBoxContainer2"]
+visible = false
+margin_left = 4.0
+margin_right = 1024.0
+margin_bottom = 472.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2/Quit_Load"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="top border" type="Label" parent="VBoxContainer/HBoxContainer2/Quit_Load/VBoxContainer"]
+margin_right = 1020.0
+margin_bottom = 14.0
+size_flags_vertical = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/Quit_Load/VBoxContainer"]
+margin_top = 18.0
+margin_right = 1020.0
+margin_bottom = 38.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/Quit_Load/VBoxContainer/HBoxContainer"]
+margin_top = 3.0
+margin_right = 200.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="titlescreen" type="Button" parent="VBoxContainer/HBoxContainer2/Quit_Load/VBoxContainer/HBoxContainer"]
+margin_left = 204.0
+margin_right = 405.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 2
+text = "TITLE SCREEN"
+
+[node name="closegame" type="Button" parent="VBoxContainer/HBoxContainer2/Quit_Load/VBoxContainer/HBoxContainer"]
+margin_left = 409.0
+margin_right = 610.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 2
+text = "CLOSE GAME"
+
+[node name="Load_game" type="Button" parent="VBoxContainer/HBoxContainer2/Quit_Load/VBoxContainer/HBoxContainer"]
+margin_left = 614.0
+margin_right = 815.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 2
+text = "LOAD GAME"
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2/Quit_Load/VBoxContainer/HBoxContainer"]
+margin_left = 819.0
+margin_top = 3.0
+margin_right = 1020.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/equipment" to="." method="_on_equipment_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/items" to="." method="_on_items_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/map" to="." method="_on_map_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Quit_Load" to="." method="_on_Quit_Load_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Quit_Load/VBoxContainer/HBoxContainer/titlescreen" to="VBoxContainer/HBoxContainer2/Quit_Load" method="_on_titlescreen_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Quit_Load/VBoxContainer/HBoxContainer/closegame" to="VBoxContainer/HBoxContainer2/Quit_Load" method="_on_closegame_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Quit_Load/VBoxContainer/HBoxContainer/Load_game" to="VBoxContainer/HBoxContainer2/Quit_Load" method="_on_Load_game_pressed"]

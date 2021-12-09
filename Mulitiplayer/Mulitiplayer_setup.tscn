@@ -1,0 +1,130 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Mulitiplayer/mulitiplayer.gd" type="Script" id=1]
+
+[node name="Mulitiplayer" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="left boder" type="Label" parent="HBoxContainer"]
+margin_top = 293.0
+margin_right = 144.0
+margin_bottom = 307.0
+size_flags_horizontal = 9
+text = "                                    "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 148.0
+margin_right = 876.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+
+[node name="top border" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_right = 728.0
+margin_bottom = 14.0
+
+[node name="Host Game" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 728.0
+margin_bottom = 38.0
+
+[node name="Host Game" type="Button" parent="HBoxContainer/VBoxContainer/Host Game"]
+margin_right = 728.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Host Game"
+
+[node name="Join Game" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+margin_top = 42.0
+margin_right = 728.0
+margin_bottom = 62.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Join Game" type="Button" parent="HBoxContainer/VBoxContainer/Join Game"]
+margin_right = 728.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Join Game"
+
+[node name="Enter IP" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+margin_top = 66.0
+margin_right = 728.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+
+[node name="Enter IP" type="Label" parent="HBoxContainer/VBoxContainer/Enter IP"]
+margin_right = 362.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Enter IP"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="Enter IP2" type="LineEdit" parent="HBoxContainer/VBoxContainer/Enter IP"]
+margin_left = 366.0
+margin_right = 728.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "X.X.X.X"
+max_length = 15
+
+[node name="Enter Name" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+margin_top = 94.0
+margin_right = 728.0
+margin_bottom = 118.0
+size_flags_horizontal = 3
+
+[node name="Enter Name" type="Label" parent="HBoxContainer/VBoxContainer/Enter Name"]
+margin_right = 362.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Enter Name"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="Enter Name2" type="LineEdit" parent="HBoxContainer/VBoxContainer/Enter Name"]
+margin_left = 366.0
+margin_right = 728.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_length = 15
+
+[node name="right border" type="Label" parent="HBoxContainer"]
+margin_left = 880.0
+margin_top = 293.0
+margin_right = 1024.0
+margin_bottom = 307.0
+size_flags_horizontal = 9
+text = "                                    "
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Host Game/Host Game" to="HBoxContainer/VBoxContainer" method="_on_Host_Game_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Join Game/Join Game" to="HBoxContainer/VBoxContainer" method="_on_Join_Game_pressed"]

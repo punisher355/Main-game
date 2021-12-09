@@ -1,0 +1,208 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/HUD/window.png" type="Texture" id=1]
+[ext_resource path="res://Options/Map_Tile/New Bitmap Image.bmp" type="Texture" id=2]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 224, 201 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 1227, 1073 )
+
+[node name="Game_map" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left border" type="Label" parent="HBoxContainer"]
+margin_top = 293.0
+margin_right = 144.0
+margin_bottom = 307.0
+size_flags_horizontal = 9
+text = "                                    "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 148.0
+margin_right = 876.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/VBoxContainer"]
+margin_right = 728.0
+margin_bottom = 548.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="HBoxContainer/VBoxContainer/GridContainer"]
+margin_right = 142.0
+margin_bottom = 180.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel12" type="Panel" parent="HBoxContainer/VBoxContainer/GridContainer"]
+margin_left = 146.0
+margin_right = 288.0
+margin_bottom = 180.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel13" type="Panel" parent="HBoxContainer/VBoxContainer/GridContainer"]
+margin_left = 292.0
+margin_right = 434.0
+margin_bottom = 180.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel14" type="Panel" parent="HBoxContainer/VBoxContainer/GridContainer"]
+margin_left = 438.0
+margin_right = 580.0
+margin_bottom = 180.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel15" type="Panel" parent="HBoxContainer/VBoxContainer/GridContainer"]
+margin_left = 584.0
+margin_right = 726.0
+margin_bottom = 180.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/VBoxContainer/GridContainer"]
+margin_top = 184.0
+margin_right = 142.0
+margin_bottom = 364.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/VBoxContainer/GridContainer"]
+margin_left = 146.0
+margin_top = 184.0
+margin_right = 288.0
+margin_bottom = 364.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/VBoxContainer/GridContainer"]
+margin_left = 292.0
+margin_top = 184.0
+margin_right = 434.0
+margin_bottom = 364.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/VBoxContainer/GridContainer"]
+margin_left = 438.0
+margin_top = 184.0
+margin_right = 580.0
+margin_bottom = 364.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel6" type="Panel" parent="HBoxContainer/VBoxContainer/GridContainer"]
+margin_left = 584.0
+margin_top = 184.0
+margin_right = 726.0
+margin_bottom = 364.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel7" type="Panel" parent="HBoxContainer/VBoxContainer/GridContainer"]
+margin_top = 368.0
+margin_right = 142.0
+margin_bottom = 548.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel8" type="Panel" parent="HBoxContainer/VBoxContainer/GridContainer"]
+margin_left = 146.0
+margin_top = 368.0
+margin_right = 288.0
+margin_bottom = 548.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel9" type="Panel" parent="HBoxContainer/VBoxContainer/GridContainer"]
+margin_left = 292.0
+margin_top = 368.0
+margin_right = 434.0
+margin_bottom = 548.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel10" type="Panel" parent="HBoxContainer/VBoxContainer/GridContainer"]
+margin_left = 438.0
+margin_top = 368.0
+margin_right = 580.0
+margin_bottom = 548.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel11" type="Panel" parent="HBoxContainer/VBoxContainer/GridContainer"]
+margin_left = 584.0
+margin_top = 368.0
+margin_right = 726.0
+margin_bottom = 548.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Bottom Border" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_top = 552.0
+margin_right = 728.0
+margin_bottom = 600.0
+size_flags_horizontal = 9
+text = "
+
+  "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Right Border" type="Label" parent="HBoxContainer"]
+margin_left = 880.0
+margin_top = 293.0
+margin_right = 1024.0
+margin_bottom = 307.0
+size_flags_horizontal = 9
+text = "                                    "
+__meta__ = {
+"_edit_use_anchors_": false
+}

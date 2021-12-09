@@ -1,0 +1,121 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Title screen/Title_screen.gd" type="Script" id=1]
+[ext_resource path="res://Options/Options.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Mulitiplayer/Mulitiplayer_setup.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Music/HinaCC0_011_Fallen_leaves.mp3" type="AudioStream" id=4]
+
+[node name="Title screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 152.0
+size_flags_horizontal = 3
+size_flags_vertical = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_right = 338.0
+margin_bottom = 152.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Select" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 342.0
+margin_right = 681.0
+margin_bottom = 152.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Select"]
+margin_right = 339.0
+margin_bottom = 14.0
+
+[node name="New Game" type="Button" parent="VBoxContainer/HBoxContainer/Select"]
+margin_top = 18.0
+margin_right = 339.0
+margin_bottom = 38.0
+text = "NEW GAME"
+
+[node name="Load Game" type="Button" parent="VBoxContainer/HBoxContainer/Select"]
+margin_top = 42.0
+margin_right = 339.0
+margin_bottom = 62.0
+text = "LOAD GAME"
+
+[node name="Mulitiplayer" type="Button" parent="VBoxContainer/HBoxContainer/Select"]
+margin_top = 66.0
+margin_right = 339.0
+margin_bottom = 86.0
+text = "Mulitiplayer"
+
+[node name="Options" type="Button" parent="VBoxContainer/HBoxContainer/Select"]
+margin_top = 90.0
+margin_right = 339.0
+margin_bottom = 110.0
+text = "OPTIONS"
+
+[node name="Close Game" type="Button" parent="VBoxContainer/HBoxContainer/Select"]
+margin_top = 114.0
+margin_right = 339.0
+margin_bottom = 134.0
+text = "CLOSE GAME"
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Select"]
+margin_top = 138.0
+margin_right = 339.0
+margin_bottom = 152.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 685.0
+margin_right = 1024.0
+margin_bottom = 152.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Options" parent="VBoxContainer" instance=ExtResource( 2 )]
+visible = false
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 156.0
+margin_right = 1024.0
+margin_bottom = 576.0
+
+[node name="Mulitiplayer" parent="VBoxContainer" instance=ExtResource( 3 )]
+visible = false
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 156.0
+margin_right = 1024.0
+margin_bottom = 576.0
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 4 )
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Select/New Game" to="." method="_on_New_Game_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Select/Load Game" to="." method="_on_Load_Game_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Select/Mulitiplayer" to="." method="_on_Mulitiplayer_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Select/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Select/Close Game" to="." method="_on_Close_Game_pressed"]

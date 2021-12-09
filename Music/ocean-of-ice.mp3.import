@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ocean-of-ice.mp3-993947d1d97c06f4750fa7e42dd4732c.mp3str"
+
+[deps]
+
+source_file="res://Music/ocean-of-ice.mp3"
+dest_files=[ "res://.import/ocean-of-ice.mp3-993947d1d97c06f4750fa7e42dd4732c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
